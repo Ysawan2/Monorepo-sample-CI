@@ -4,6 +4,7 @@ on:
     paths: 
       - "backend/*"
 jobs:
+  
   build:
     runs-on: ubuntu-latest
     steps:
@@ -12,3 +13,14 @@ jobs:
       - name: build backend
         working-directory: ./backend
         run: go build .
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v6
+        with: 
+          python-version: '3.12'
+      - name:
+        working-directory: ./testing
+        run: |
+          make run
