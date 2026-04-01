@@ -1,6 +1,8 @@
 on:
   push:
     branches: ["actions-v1"]
+    paths: 
+      - "backend/*"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,4 +11,4 @@ jobs:
       - uses: actions/setup-go@v4
       - name: build backend
         working-directory: ./backend
-        run: go run main.go
+        run: go build .
