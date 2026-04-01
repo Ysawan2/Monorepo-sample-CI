@@ -3,6 +3,7 @@ on:
     branches: ["actions-v1"]
     paths: 
       - "backend/*"
+      - ".github/*"
 jobs:
   
   build:
