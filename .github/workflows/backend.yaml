@@ -7,4 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v4
-      - run: go run ../backend/main.go
+      - name: build backend
+        working_directory: ./backend
+        run: go run main.go
