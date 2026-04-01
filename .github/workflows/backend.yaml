@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v4
       - name: build backend
-        working_directory: ./backend
+        working-directory: ./backend
         run: go run main.go
