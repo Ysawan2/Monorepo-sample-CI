@@ -1,6 +1,8 @@
 on:
   push:
-    branches: ["actions-v1"]
+    branches: 
+      - "actions-v1"
+      - "main"
     paths: 
       - "backend/*"
       - ".github/*"
