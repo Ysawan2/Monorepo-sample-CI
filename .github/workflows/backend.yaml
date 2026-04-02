@@ -3,10 +3,10 @@ on:
     branches: 
       - "actions-v1"
       - "main"
-    paths: 
-      - "backend/*"
-      - ".github/*"
-      - "testing/*"
+    # paths: 
+    #   - "backend/*"
+    #   - ".github/*"
+    #   - "testing/*"
 jobs:
   
   build:
