@@ -4,4 +4,4 @@ setup:
 	export PATH=$PATH:$HOME/.local/bin
 
 run: setup
-	poetry run 
+	poetry run pytest 
