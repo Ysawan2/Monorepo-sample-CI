@@ -4,5 +4,5 @@ install_deps:
 	export PATH=$PATH:$HOME/.local/bin
 
 run: install_deps
-	poetry install 
+	poetry install --no-root
 	poetry run pytest 
