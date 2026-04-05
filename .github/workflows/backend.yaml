@@ -1,27 +1,26 @@
-on:
-  push:
-    branches: 
-      - "actions-v1"
-      - "main"
-    # paths: 
-    #   - "backend/*"
-    #   - ".github/*"
-    #   - "testing/*"
-jobs:
-  
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v4
-      - name: build backend
-        working-directory: ./backend
-        run: go build .
-      - name: "setup python"
-        uses: actions/setup-python@v6
-        with: 
-          python-version: '3.12'
-      - name: "poetry based testing"
-        working-directory: ./testing
-        run: |
-          make run
+# on:
+#   push:
+#     branches: 
+#       - "actions-v1"
+#       - "main"
+#     # paths: 
+#     #   - "backend/*"
+#     #   - ".github/*"
+#     #   - "testing/*"
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-go@v4
+#       - name: build backend
+#         working-directory: ./backend
+#         run: go build .
+#       - name: "setup python"
+#         uses: actions/setup-python@v6
+#         with: 
+#           python-version: '3.12'
+#       - name: "poetry based testing"
+#         working-directory: ./testing
+#         run: |
+#           make run

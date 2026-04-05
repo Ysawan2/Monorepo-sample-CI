@@ -1,0 +1,17 @@
+apiVersion: skaffold/v4beta13
+kind: Config
+metadata:
+  name: monorepo-sample-ci
+manifests:
+  rawYaml:
+    - backend/k8s/deployment.yaml
+build:
+  local:
+    push: true
+  artifacts:
+    - image: "sawany/backend"
+      context: backend
+      docker: 
+        dockerfile: "Dockerfile"
+deploy:
+  kubectl: {}
